@@ -4,4 +4,8 @@ class Passenger < ApplicationRecord
   has_many :flights, through: :flight_passengers
   validates_presence_of :name, :age
 
-end 
+  def flight_count
+    flights.count
+  end
+
+end

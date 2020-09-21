@@ -22,7 +22,7 @@ RSpec.describe Airline, type: :model do
       passenger4 = flight2.passengers.create!(name: 'Dan', age: 16)
       flight2.passengers << passenger1
 
-      expect(southwest.passengers).to eq([passenger1, passenger2, passenger3, passenger4, passenger1])
+      expect(southwest.passengers).to eq([passenger1, passenger1, passenger2, passenger3, passenger4])
       expect(southwest.unique_passengers).to eq(['Alex', 'Dan', 'Saryn', 'Tyler'])
     end
 
